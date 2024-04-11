@@ -41,7 +41,7 @@ services:
       MYSQL_USER:  ${MYSQL_USER:-dbuser}
       MYSQL_PASSWORD:  ${MYSQL_PASSWORD:-pass4dbuser}
     volumes:
-      - ./docker/databases/mysql_dump:/docker-entrypoint-initdb.d
+      - ./docker/database/mysql_dump:/docker-entrypoint-initdb.d
 
   nginx:
     image: nginx:latest
