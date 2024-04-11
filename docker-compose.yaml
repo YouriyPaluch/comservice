@@ -56,7 +56,7 @@ services:
     volumes:
       - ./:${WORKDIR}
       - ./docker/nginx:/etc/nginx/conf.d
-      - ./docker/nginx/project.conf:/etc/nginx/templates/project.conf
+      - ./docker/nginx/project.conf.template:/etc/nginx/templates/project.conf.template
       - ./logs/nginx:/var/log/nginx
     links:
       - web
