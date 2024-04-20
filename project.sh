@@ -1,7 +1,7 @@
 #!/bin/sh
 if test -f .env; then
       echo 'Run';
-#      docker-compose --env-file .env.local up;
+      docker-compose --env-file .env.local up;
     else
       echo 'Installation';
       if test -f docker-compose.yaml; then
