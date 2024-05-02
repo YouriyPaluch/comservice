@@ -9,8 +9,6 @@ if test -f .env; then
       fi
       cp docker-compose.yaml.install.example docker-compose.yaml;
       docker-compose --env-file .env.install up --build;
-      chmod 777 docker-compose.yaml;
       rm docker-compose.yaml;
-#      sed '3,13d' docker-compose.yaml.example > docker-compose.yaml;
       cp docker-compose.yaml.example docker-compose.yaml;
 fi
