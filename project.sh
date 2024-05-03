@@ -1,6 +1,9 @@
 #!/bin/sh
 if test -f .env; then
       echo 'Run';
+      if [ ! -f docker-compose.yaml ]; then
+        cp docker-compose.yaml.example docker-compose.yaml;
+      fi
       docker-compose --env-file .env.local up;
     else
       echo 'Installation';

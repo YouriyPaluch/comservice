@@ -63,7 +63,6 @@ if test -f "${target_path}/symfony.lock"; then
     git add $target_path/*
 
     echo -e "${On_Green}   Install complete successful   ${NC}"
-#    echo -e "${On_Green}   Run 'docker-compose up' now  ${NC}"
 fi
 
     tail -f /dev/null

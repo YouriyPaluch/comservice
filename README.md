@@ -30,6 +30,12 @@ to LF (Unix and MAcOS(\n))
 This may take a few minutes. Wait for completion.
 
 ### Step 3
+Change owner for project dir 
+```console
+ sudo chown -R 1000:1000 ~/projects/comservice/
+```
+
+### Step 4
 Profit
 
 ## Use
