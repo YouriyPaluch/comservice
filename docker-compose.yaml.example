@@ -49,3 +49,11 @@ services:
       - ./logs/nginx:/var/log/nginx
     links:
       - web
+
+  node:
+    hostname: node
+    container_name: node_${PROJECT_NAME}
+    build: ./docker/node
+    volumes:
+      - ./:${WORKDIR}
+    working_dir: ${WORKDIR}
