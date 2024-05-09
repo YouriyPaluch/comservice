@@ -14,9 +14,19 @@
     </head>
     <body>
         <header class="header">
-            <div><img src="img/logo/cs-logo.png" alt="cs-logo.png" class="cs-logo"></div>
-            <div>ComService</div>
+            <img src="img/logo/cs-logo.png" alt="cs-logo.png" class="cs-logo">
+            <div class="header-title">Your services assistant</div>
+            <div class="header-user-action">
+                <a href="auth">Sign In</a>
+                <a href="registration">Sign Up</a>
+            </div>
         </header>
-        {% block body %}{% endblock %}
+        <content class="content">
+            {% block body %}{% endblock %}
+        </content>
+        <footer class="footer">
+            &copy; {{date}} ComService
+        </footer>
+
     </body>
 </html>

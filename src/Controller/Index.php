@@ -9,14 +9,12 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class Index extends AbstractController
 {
-    #[Route('/', name: 'home')]
-    #[Template('index/index.html.twig')]
-    public function index(): array
-    {
-        $number = random_int(0, 100);
-
-        return [
-            'number' => $number,
-        ];
-    }
+	#[Route('/', name: 'home')]
+	#[Template('index/index.html.twig')]
+	public function index(): array
+	{
+		return [
+			'date' => '2024-' . date('Y'),
+		];
+	}
 }

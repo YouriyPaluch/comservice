@@ -1,19 +1,43 @@
 body {
     margin: 0;
+    position: relative;
 }
 
 .header {
-    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    width: calc(100% - 40px);
     background-color: #03AED2;
     height: 100px;
     position: fixed;
+    top: 0;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .cs-logo {
-    width: 100px;
+    width: 150px;
+}
+
+.header-user-action {
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+}
+
+.content {
+    padding: 0 20px;
+    display: block;
+    margin-top: 100px;
 }
 
 .footer {
+    position: fixed;
+    bottom: 0;
     background-color: #FEEFAD;
-    height: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    width: 100%;
+    padding: 0 20px;
 }
