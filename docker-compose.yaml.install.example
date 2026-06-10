@@ -1,4 +1,3 @@
-version: "3.*"
 services:
   symfony-install:
     container_name: symfony_${PROJECT_NAME}_install

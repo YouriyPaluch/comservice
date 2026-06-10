@@ -137,4 +137,12 @@ class User  implements PasswordAuthenticatedUserInterface, UserInterface
 	{
 		return $this->email;
 	}
+
+	/**
+	 * @param string $password
+	 */
+	public function setPassword(string $password): void
+	{
+		$this->changePassword($password);
+	}
 }

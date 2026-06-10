@@ -11,10 +11,6 @@ class Index extends AbstractController
 {
 	#[Route('/', name: 'home')]
 	#[Template('index/index.html.twig')]
-	public function index(): array
-	{
-		return [
-			'date' => '2024-' . date('Y'),
-		];
-	}
+	public function index(): void
+	{}
 }

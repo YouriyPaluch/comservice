@@ -16,7 +16,8 @@ body {
 }
 
 .cs-logo {
-    width: 150px;
+    width: 90px;
+    border-radius: 15px;
 }
 
 .header-user-action {

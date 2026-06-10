@@ -3,22 +3,26 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Your services assistant{% endblock %}</title>
-        <link rel="icon" href="img/logo/cs-favicon.png">
+        <link rel="icon" href="img/logo/favicon.ico">
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
 
         {% block javascripts %}
+            {% block importmap %}{{ importmap('app') }}{% endblock %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
     <body>
         <header class="header">
-            <img src="img/logo/cs-logo.png" alt="cs-logo.png" class="cs-logo">
+            <video class="cs-logo" autoplay loop muted playsinline>
+                <source src="{{ asset('img/logo/logo.mp4') }}" type="video/mp4">
+                <img src="{{ asset('img/logo/logo.png') }}" alt="Company Logo">
+            </video>
             <div class="header-title">Your services assistant</div>
             <div class="header-user-action">
-                <a href="auth">Sign In</a>
-                <a href="registration">Sign Up</a>
+                <a href="{{ path('app_login') }}">Sign In</a>
+                <a href="{{ path('app_register')}}">Sign Up</a>
             </div>
         </header>
         <content class="content">
