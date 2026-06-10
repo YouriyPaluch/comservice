@@ -1,10 +1,10 @@
-FROM php:8.3-fpm
+FROM php:8.4-fpm
 ARG WORKDIR
 WORKDIR ${WORKDIR}
 
-RUN apt-get -y update && apt-get -y install git unzip vim rsync
+RUN apt-get -y update && apt-get -y install git unzip vim rsync libicu-dev
 
-RUN docker-php-ext-install pdo pdo_mysql
+RUN docker-php-ext-install intl pdo pdo_mysql
 
 RUN pecl install xdebug && docker-php-ext-enable xdebug;
 COPY ./docker/web/xdebug.ini /usr/local/etc/web/conf.d/xdebug.ini
